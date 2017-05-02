@@ -1,2 +1,2 @@
 # intel.sh
-scaling irq among many cpu cores for network cards
+scaling network cards irq among cpu cores on multicpu systems
