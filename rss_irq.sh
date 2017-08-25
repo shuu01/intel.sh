@@ -5,7 +5,7 @@ ncpus=`grep -ciw ^processor /proc/cpuinfo`
 test "$ncpus" -gt 1 || exit 1
 
 n=0
-for irq in `cat /proc/interrupts | grep TxRx | awk '{print $1}' | sed s/\://g`
+for irq in `cat /proc/interrupts | grep 'TxRx\|tx\|rx' | awk '{print $1}' | sed s/\://g`
 do
     f="/proc/irq/$irq/smp_affinity"
     test -r "$f" || continue
