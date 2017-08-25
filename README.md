@@ -1,2 +1,2 @@
-# rss_irq.sh
+# rss_irq
 scaling network cards irq among cpu cores on multicpu systems
